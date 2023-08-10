@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+option go_package = "github.com:meowalien/RabbitGather-proto/interest";
+
+package interest;
+
+service InterestCrawler {
+  rpc Crawl (CrawlRequest) returns(google.protobuf.Empty);
+}
+
+message CrawlRequest {
+  string url = 1;
+  string query_selector = 2;
+}
+
