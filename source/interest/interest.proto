@@ -11,7 +11,6 @@ service InterestCrawler {
 }
 
 message CrawlRequest {
-  string url = 1;
-  string query_selector = 2;
+  string taskID = 1;
 }
 
